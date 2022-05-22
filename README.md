@@ -1,2 +1,2 @@
 # codingdojo
-Coding Dojo Practice Assignments
+Coding Dojo Practice Assignments in Flask
