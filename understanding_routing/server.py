@@ -30,7 +30,7 @@ def say_flask(name):
 # NINJA BONUS: For the 4th task, ensure the 2nd element in the URL is an integer, and the 3rd element is a string
 @app.route('/repeat/<int:num_of_repeats>/<string:word_to_repeat>')
 def repeat_word(num_of_repeats, word_to_repeat):
-    return f"<p>{word_to_repeat}</p>" * 3
+    return f"<p>{word_to_repeat}</p>" * num_of_repeats
 
 # SENSEI BONUS: Ensure that if the user types in any route other than the ones specified, 
 # they receive an error message saying "Sorry! No response. Try again."
@@ -39,4 +39,4 @@ def display_error(unknown_root):
     return "Sorry! No response. Try again."
 
 if __name__=="__main__":
-    app.run(debug = True, port = 5001)
+    app.run(debug = True)
