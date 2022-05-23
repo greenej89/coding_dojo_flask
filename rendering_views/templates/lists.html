@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='/css/style.css')  }}">
+    <title>Rendering Lists</title>
+</head>
+<body>
+    <h2 class="skyblue arial">Iterating Through a List of Random Numbers</h2>
+    {% for num in random_numbers %}
+        <ul> {{ num }} </ul>
+    {% endfor %}
+
+    <h2 class="skyblue arial">Creating a Table from a List of Dictionaries</h2>
+    <table>
+        <caption>Students</caption>
+        <thead>
+            <tr>
+                <th class="arial"> Name</th>
+                <th class="arial">Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+                <tr>
+                    <td> {{ student['name'] }} </td>
+                    <td> {{ student['age'] }} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+    
+</body>
+</html>

@@ -13,3 +13,13 @@
 .arial {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+table, th, td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    border-color: purple;
+}
+
+h2 {
+    text-decoration: underline;
+}
