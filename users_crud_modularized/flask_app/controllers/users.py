@@ -28,7 +28,7 @@ def create_user():
         'email':  request.form['email']
     }
     user_id = User.save(data)
-    return render_template('read(one).html', user=search_users_by_id( User.get_all() , user_id ))
+    return redirect(f'/users/{user_id}')
 
 # Takes a parameter for user_id.  
 # Returns a page containing information for the given user_id and the respective User instance.
